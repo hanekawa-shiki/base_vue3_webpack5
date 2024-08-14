@@ -11,7 +11,7 @@ module.exports = {
   entry: ['./src/main.js'],
   output: {
     clean: true,
-    filename: '[name].[hash:8].js',
+    filename: '[name].[fullhash:8].js',
     path: config.build.assetsRoot,
     publicPath: config.build.assetsPublicPath,
   },
@@ -25,7 +25,8 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        use: [{ loader: 'vue-loader' }],
+        loader: 'vue-loader',
+        // use: [{ loader: 'vue-loader' }],
       },
 
       {
@@ -48,5 +49,5 @@ module.exports = {
     ],
   },
   plugins: [new VueLoaderPlugin(), new NodePolyfillWebpackPlugin()],
-  target: 'browserslist',
+  target: 'web',
 };

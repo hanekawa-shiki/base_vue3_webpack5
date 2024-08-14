@@ -68,7 +68,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         type: 'asset',
         // exclude: [],
         generator: {
-          filename: utils.assetsPath('img/[name].[hash:8][ext]'),
+          filename: utils.assetsPath('img/[name].[fullhash:8][ext]'),
         },
         parser: {
           dataUrlCondition: {
@@ -81,7 +81,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         type: 'asset',
         // exclude: [],
         generator: {
-          filename: utils.assetsPath('fonts/[name].[hash:8][ext]'),
+          filename: utils.assetsPath('fonts/[name].[fullhash:8][ext]'),
         },
         parser: {
           dataUrlCondition: {

@@ -12,7 +12,6 @@ module.exports = merge(baseWebpackConfig, {
   devtool: config.dev.devtool,
   devServer: {
     hot: true,
-    open: true,
     host: config.dev.host,
     port: config.dev.port || 8080,
     client: {
@@ -89,6 +88,7 @@ module.exports = merge(baseWebpackConfig, {
       'process.env': require('../config/dev.env'),
       __VUE_OPTIONS_API__: false,
       __VUE_PROD_DEVTOOLS__: false,
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ : false,
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
