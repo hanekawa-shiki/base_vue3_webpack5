@@ -9,6 +9,7 @@ const { resolve } = require('./utils');
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
+  cache: false, // 临时解决热更新不生效问题
   devtool: config.dev.devtool,
   devServer: {
     hot: true,
